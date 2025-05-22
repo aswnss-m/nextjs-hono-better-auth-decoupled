@@ -27,6 +27,7 @@ export const auth = betterAuth({
 		},
 	},
 
+	// trustedOrigins
 	trustedOrigins: ["http://localhost:3000"],
 
 	// Enable cookie cache to avoid hitting db to get session each time
