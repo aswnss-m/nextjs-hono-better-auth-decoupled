@@ -1,6 +1,7 @@
 import { Hono } from "hono";
 import authRouter from "./routes/auth";
 import messageRouter from "./routes/message";
+import middlewareRoute from "./routes/middlewareProtected";
 import type { AuthType } from "./lib/auth";
 import { cors } from "hono/cors";
 import { logger } from "hono/logger";
@@ -22,7 +23,7 @@ app.use(
 	})
 );
 
-const api_routes = [authRouter, messageRouter]; // Routes that needs to be added /api as their basePath
+const api_routes = [authRouter, messageRouter, middlewareRoute]; // Routes that needs to be added /api as their basePath
 
 // Iterating through the routes and setting '/api' as their base path
 for (const route of api_routes) {
