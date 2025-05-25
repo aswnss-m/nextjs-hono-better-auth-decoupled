@@ -119,7 +119,7 @@ bun dev                      # Start frontend on port 3000
 
 ### Frontend (Next.js)
 
--   **Next.js 14** - React framework with App Router
+-   **Next.js 15** - React framework with App Router
 -   **React** - UI library
 -   **TypeScript** - Type safety
 -   **Tailwind CSS** - Utility-first styling
