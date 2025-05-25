@@ -1,0 +1,133 @@
+Folder PATH listing
+Volume serial number is EE4E-95D9
+C:\USERS\ASWIN\P\NEXTJS-HONO-BETTER-AUTH-DECOUPLED
+|   bun.lockb
+|   README.md
+|   structure.txt
+|   
++---frontend-user
+|   |   .env
+|   |   .gitignore
+|   |   bun.lockb
+|   |   components.json
+|   |   next-env.d.ts
+|   |   next.config.ts
+|   |   package.json
+|   |   postcss.config.mjs
+|   |   README.md
+|   |   tsconfig.json
+|   |   
+|   +---public
+|   |       file.svg
+|   |       globe.svg
+|   |       next.svg
+|   |       vercel.svg
+|   |       window.svg
+|   |       
+|   \---src
+|       +---app
+|       |   |   favicon.ico
+|       |   |   globals.css
+|       |   |   layout.tsx
+|       |   |   page.tsx
+|       |   |   
+|       |   +---(protected)
+|       |   |   +---message
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   +---message-client
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   +---profile
+|       |   |   |       page.tsx
+|       |   |   |       
+|       |   |   \---profile-client
+|       |   |           page.tsx
+|       |   |           
+|       |   +---actions
+|       |   |       message.ts
+|       |   |       
+|       |   +---login
+|       |   |       page.tsx
+|       |   |       
+|       |   \---register
+|       |           page.tsx
+|       |           
+|       +---components
+|       |   |   login-form.tsx
+|       |   |   register-form.tsx
+|       |   |   sign-out.tsx
+|       |   |   
+|       |   \---ui
+|       |           button.tsx
+|       |           card.tsx
+|       |           form.tsx
+|       |           input.tsx
+|       |           label.tsx
+|       |           
+|       +---lib
+|       |       auth.ts
+|       |       utils.ts
+|       |       
+|       \---zod
+\---hono-backend
+    |   .env
+    |   .env.sample
+    |   .gitignore
+    |   bun.lockb
+    |   file_structure.txt
+    |   package.json
+    |   README.md
+    |   tsconfig.json
+    |   
+    +---prisma
+    |   |   schema.prisma
+    |   |   
+    |   \---migrations
+    |       |   migration_lock.toml
+    |       |   
+    |       \---20250522124535_auth_schema_updated
+    |               migration.sql
+    |               
+    \---src
+        |   index.ts
+        |   
+        +---generated
+        |   \---prisma
+        |       |   client.d.ts
+        |       |   client.js
+        |       |   default.d.ts
+        |       |   default.js
+        |       |   edge.d.ts
+        |       |   edge.js
+        |       |   index-browser.js
+        |       |   index.d.ts
+        |       |   index.js
+        |       |   package.json
+        |       |   query_engine-windows.dll.node
+        |       |   schema.prisma
+        |       |   wasm.d.ts
+        |       |   wasm.js
+        |       |   
+        |       \---runtime
+        |               edge-esm.js
+        |               edge.js
+        |               index-browser.d.ts
+        |               index-browser.js
+        |               library.d.ts
+        |               library.js
+        |               react-native.js
+        |               wasm.js
+        |               
+        +---lib
+        |       auth.ts
+        |       prismaClient.ts
+        |       
+        +---middlewares
+        |       authMiddleware.ts
+        |       
+        \---routes
+                auth.ts
+                message.ts
+                middlewareProtected.ts
+                
