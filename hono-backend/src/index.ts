@@ -1,12 +1,15 @@
 import { Hono } from "hono";
 import authRouter from "./routes/auth";
+import messageRouter from "./routes/message";
 import type { AuthType } from "./lib/auth";
 import { cors } from "hono/cors";
+import { logger } from "hono/logger";
 
 const app = new Hono<{ Variables: AuthType }>({
 	strict: false,
 });
 
+app.use(logger());
 app.use(
 	"*",
 	cors({
@@ -19,13 +22,13 @@ app.use(
 	})
 );
 
-// const api_routes = [authRouter];
+const api_routes = [authRouter, messageRouter]; // Routes that needs to be added /api as their basePath
 
-// for (const route of api_routes) {
-// 	app.basePath("/api").route("/", route);
-// }
+// Iterating through the routes and setting '/api' as their base path
+for (const route of api_routes) {
+	app.basePath("/api").route("/", route);
+}
 
-app.route("/api", authRouter);
 app.get("/", (c) => {
 	return c.text("Hello Hono!");
 });
